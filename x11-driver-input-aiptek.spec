@@ -39,6 +39,6 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %{_libdir}/xorg/modules/input/aiptek_drv.la
 %{_libdir}/xorg/modules/input/aiptek_drv.so
-%{_mandir}/man4/aiptek.4.bz2
+%{_mandir}/man4/aiptek.*
 
 
