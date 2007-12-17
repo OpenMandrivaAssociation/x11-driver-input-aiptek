@@ -4,6 +4,7 @@ Release: %mkrel 5
 Summary: X.org input driver for Aiptek HyperPen USB-based tablet devices
 Group: Development/X11
 
+URL: http://xorg.freedesktop.org
 # Note tar is on tag aiptek-1_0_1
 # Check Patch1 for changes from tag 1.0.1 to "version" 1.1.0
 ########################################################################
