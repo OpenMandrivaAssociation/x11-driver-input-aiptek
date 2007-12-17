@@ -4,18 +4,24 @@ Release: %mkrel 5
 Summary: X.org input driver for Aiptek HyperPen USB-based tablet devices
 Group: Development/X11
 
+# Note tar is on tag aiptek-1_0_1
+# Check Patch1 for changes from tag 1.0.1 to "version" 1.1.0
 ########################################################################
-# git clone git//git.mandriva.com/people/pcpa/xorg/drivers/xf86-input-aiptek  xorg/drivers/xf86-input-aiptek
+# git clone git://git.mandriva.com/people/pcpa/xorg/drivers/xf86-input-aiptek  xorg/drivers/xf86-input-aiptek
 # cd xorg/drivers/xf86-input-aiptek
-# git-archive --format=tar --prefix=xf86-input-aiptek-1.1.0/ master | bzip2 -9 > xf86-input-aiptek-1.1.0.tar.bz2
+# git-archive --format=tar --prefix=xf86-input-aiptek-1.1.0/ aiptek-1_0_1 | bzip2 -9 > xf86-input-aiptek-1.1.0.tar.bz2
 ########################################################################
 Source0: xf86-input-aiptek-%{version}.tar.bz2
 
 License: MIT
 
 ########################################################################
-# git-format-patch master..origin/mandriva+gpl
-Patch1: 0001-Update-for-new-policy-of-hidden-symbols-and-common-m.patch
+# git-format-patch aiptek-1_0_1..origin/mandriva+gpl
+Patch1: 0001-Fix-1.1.0-version-in-configure.ac.patch
+Patch2: 0002-Use-PACKAGE_VERSION_MAJOR-MINOR-PATCHLEVEL-in-xf86Ai.patch
+Patch3: 0003-Rename-.cvsignore-to-.gitignore.patch
+Patch4: 0004-Add-to-.gitignore-to-skip-patch-emacs-droppings.patch
+Patch5: 0005-Update-for-new-policy-of-hidden-symbols-and-common-m.patch
 ########################################################################
 
 BuildRequires: x11-proto-devel >= 1.0.0
@@ -33,6 +39,8 @@ rework. (Also links with libm; not really a problem).
 
 %prep
 %setup -q -n xf86-input-aiptek-%{version}
+
+%patch1 -p1
 
 %build
 autoreconf -ifs
