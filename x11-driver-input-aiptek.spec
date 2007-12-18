@@ -20,11 +20,7 @@ License: MIT
 
 ########################################################################
 # git-format-patch xf86-input-aiptek-1.1.0@mandriva..origin/mandriva+gpl
-Patch1: 0001-Fix-1.1.0-version-in-configure.ac.patch
-Patch2: 0002-Use-PACKAGE_VERSION_MAJOR-MINOR-PATCHLEVEL-in-xf86Ai.patch
-Patch3: 0003-Rename-.cvsignore-to-.gitignore.patch
-Patch4: 0004-Add-to-.gitignore-to-skip-patch-emacs-droppings.patch
-Patch5: 0005-Update-for-new-policy-of-hidden-symbols-and-common-m.patch
+Patch1: 0001-Update-for-new-policy-of-hidden-symbols-and-common-m.patch
 ########################################################################
 
 BuildRequires: x11-proto-devel >= 1.0.0
