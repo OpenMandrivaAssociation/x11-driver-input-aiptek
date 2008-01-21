@@ -23,8 +23,6 @@ Patch3: 0003-Driver-s-don-t-have-to-worry-about-being-core-pointe.patch
 Patch4: 0004-miPointerCurrentScreen-is-deprecated-miPointerGetSc.patch
 Patch5: 0005-Remove-redefinition-of-NEED_XF86_TYPES.patch
 ########################################################################
-#BuildRequires: gcc			>= 4.2.2
-#BuildRequires: glibc-devel		>= 2.7
 BuildRequires: libpixman-1-devel	>= 0.9.6
 BuildRequires: x11-proto-devel		>= 7.3
 BuildRequires: x11-server-devel		>= 1.4
