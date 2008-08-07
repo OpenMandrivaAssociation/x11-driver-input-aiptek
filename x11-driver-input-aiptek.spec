@@ -3,7 +3,7 @@ Epoch: 1
 
 Name: x11-driver-input-aiptek
 Version: 1.1.1
-Release: %mkrel 1
+Release: %mkrel 2
 Summary: X.org input driver for Aiptek HyperPen USB-based tablet devices
 Group: Development/X11
 URL: http://xorg.freedesktop.org
