@@ -1,19 +1,19 @@
-Name: x11-driver-input-aiptek
-Epoch: 1
-Version: 1.4.1
-Release: 4
-Summary: X.org input driver for Aiptek HyperPen USB-based tablet devices
-Group: System/X11
-URL: http://xorg.freedesktop.org
-Source: http://xorg.freedesktop.org/releases/individual/driver/xf86-input-aiptek-%{version}.tar.bz2
-License: MIT
+Name:		x11-driver-input-aiptek
+Epoch:		1
+Version:	1.4.1
+Release:	5
+Summary:	X.org input driver for Aiptek HyperPen USB-based tablet devices
+Group:		System/X11
+URL:		http://xorg.freedesktop.org
+Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-input-aiptek-%{version}.tar.bz2
+License:	MIT
 
-BuildRequires: x11-proto-devel >= 1.0.0
-BuildRequires: x11-server-devel >= 1.12
-BuildRequires: x11-util-macros >= 1.3.0
-Conflicts: xorg-x11-server < 7.0
+BuildRequires:	x11-proto-devel >= 1.0.0
+BuildRequires:	x11-server-devel >= 1.12
+BuildRequires:	x11-util-macros >= 1.3.0
+Conflicts:	xorg-x11-server < 7.0
 
-Requires: x11-server-common %(xserver-sdk-abi-requires xinput)
+Requires:	x11-server-common %(xserver-sdk-abi-requires xinput)
 
 %description
 Aiptek is an Xorg input driver for Aiptek HyperPen USB-based tablet devices.
@@ -29,7 +29,6 @@ autoreconf -ifs
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 find %{buildroot} -type f -name "*.la" -exec rm -f {} ';'
 
