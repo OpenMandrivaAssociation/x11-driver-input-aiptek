@@ -8,11 +8,9 @@ URL:		http://xorg.freedesktop.org
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-input-aiptek-%{version}.tar.bz2
 License:	MIT
 
-BuildRequires:	x11-proto-devel >= 1.0.0
-BuildRequires:	x11-server-devel >= 1.12
-BuildRequires:	x11-util-macros >= 1.3.0
-Conflicts:	xorg-x11-server < 7.0
-
+BuildRequires:	pkgconfig(xorg-macros)
+BuildRequires:	pkgconfig(xorg-server)
+BuildRequires:	pkgconfig(xproto)
 Requires:	x11-server-common %(xserver-sdk-abi-requires xinput)
 
 %description
@@ -25,7 +23,7 @@ The RS-232C-based HyperPens are managed by the "hyperpen" driver.
 
 %build
 autoreconf -ifs
-%configure
+%configure2_5x
 %make
 
 %install
