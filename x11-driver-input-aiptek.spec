@@ -1,7 +1,7 @@
 Name:		x11-driver-input-aiptek
 Epoch:		1
 Version:	1.4.1
-Release:	16
+Release:	17
 Summary:	X.org input driver for Aiptek HyperPen USB-based tablet devices
 Group:		System/X11
 URL:		http://xorg.freedesktop.org
@@ -23,7 +23,7 @@ The RS-232C-based HyperPens are managed by the "hyperpen" driver.
 
 %build
 autoreconf -ifs
-%configure2_5x
+%configure
 %make
 
 %install
