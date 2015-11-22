@@ -22,6 +22,9 @@ The RS-232C-based HyperPens are managed by the "hyperpen" driver.
 %setup -qn xf86-input-aiptek-%{version}
 
 %build
+export CC=gcc
+export CXX=g++
+
 autoreconf -ifs
 %configure
 %make
